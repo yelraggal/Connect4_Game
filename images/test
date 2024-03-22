@@ -1,0 +1,19 @@
+
+def evaluate_window(window, piece):
+    score = 0
+    opponent_piece = 1 if piece == 2 else 2
+    opponent_consecutive = window.count(opponent_piece)
+    free_slots = window.count(0)
+
+    if opponent_consecutive == 2 and free_slots == 2:
+        score -= 2  
+    
+    return score
+
+
+borad=[[0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0]
+ [0 0 0 1 2 0 1]]
